@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.printHello("")
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +26,9 @@ class ViewController: UIViewController {
 
     func printHello(name : String) {
         
-        print("Hello \(name), this is master");
+        var student : Student? = Student.init(num: 16, name: "Jack", birthday: "2003-08-05")
+        
+        print("Hello \(student?.peopleName), age is \(student?.peopleAge)");
     }
     
 }
